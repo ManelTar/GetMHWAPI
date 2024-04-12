@@ -56,5 +56,17 @@ namespace GetMHWAPI
                 }
             }
         }
+
+        private void FormAPI_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'aPIMHWDataSet.Items' Puede moverla o quitarla según sea necesario.
+            this.itemsTableAdapter.Fill(this.aPIMHWDataSet.Items);
+
+        }
+
+        private void bindingSourceItems_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

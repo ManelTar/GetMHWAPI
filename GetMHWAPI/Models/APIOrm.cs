@@ -8,6 +8,17 @@ namespace GetMHWAPI.Models
 {
     class APIOrm
     {
+
+        public static List<Items> Select()
+        {
+            //LINQ Querying Method syntax
+            List<Items> _items = Orm.bd.Items.
+                OrderBy(c => c.id)
+                .ToList();
+
+            return _items;
+
+        }
         public static string Insert(Items item)
         {
             string message = "";
